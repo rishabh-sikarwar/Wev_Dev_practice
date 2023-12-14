@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Guess the number</title>
+    <style>
+        body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+nav {
+    background-color: #333;
+    padding: 1rem;
+    text-align: center;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    padding: 0.5rem;
+    margin: 0 1rem;
+}
+
+#wrapper {
+    max-width: 600px;
+    margin: 50px auto;
+    text-align: center;
+}
+
+h1 {
+    color: #fff;
+}
+
+form {
+    margin-top: 20px;
+}
+
+label {
+    display: block;
+    margin-bottom: 10px;
+    color: #fff;
+}
+
+.guessfield {
+    padding: 8px;
+    width: 100px;
+}
+
+.guessSubmit {
+    padding: 8px;
+    background-color: #4caf50;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+}
+
+.resultParas {
+    margin-top: 20px;
+    color: #fff;
+}
+
+.guesses {
+    font-weight: bold;
+}
+
+.lastResult {
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.lowOrHi {
+    font-style: italic;
+    margin-top: 10px;
+}
+
+    </style>
+</head>
+<body style="background-color: #212121; color: #fff;">
+    <nav>
+        <a href="/" aria-current="page">Home</a>
+        <a target="_blank" href="https://github.com/rishabh-sikarwar"> My github </a>
+       </nav>
+       <div id="wrapper">
+        <h1>Number guessing game</h1>
+        <p>Try and guess a random number between 1 and 100</p>
+        <p>You have 10 attempts to guess the right number</p>
+       </br>
+       <form  class="form">
+        <label for="guessfield" id="guess">guess a number</label>
+        <input type="text" id="guessField" class="guessfield">
+        <input type="submit" id="subt" value="submit guess" class="guessSubmit">
+       </form>
+        <div class="resultParas">
+            <p>Previous Guesses: <span class="guesses"></span></p>
+            <p>Guesses Remaining <span class="lastResult">10 </span></p>
+            <p class="lowOrHi"></p>
+        </div>
+
+       </div>
+       <script src="project_4.js"></script>
+    
+</body>
+</html>
