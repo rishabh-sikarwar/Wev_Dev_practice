@@ -1,10 +1,11 @@
-let ramdomNumber = parseInt(Math.random() * 100 + 1);
+let randomNumber = parseInt(Math.random() * 100 + 1);
+// console.log(randomNumber);
 
 const submit = document.querySelector('#subt')
-const userInput = document.querySelector('#guessfield')
+const userInput = document.querySelector('#guessField')
 const guessSlot = document.querySelector('.guesses')
 const remaining = document.querySelector('.lastResult')
-const loOrHi = document.querySelector('.loOrHi')
+const loOrHi = document.querySelector('.lowOrHi')
 const startOver = document.querySelector('.resultParas')
 
 const p = document.createElement('p')
@@ -34,7 +35,7 @@ function validateGuess(guess){
         prevGuess.push(guess)
         if(numGuess ===11){
             displayGuess(guess)
-            displayMessage(`Game Over . Random number was ${ramdomNumber}`)
+            displayMessege(`Game Over . Random number was ${ramdomNumber}`)
             endGame()
         }else {
             displayGuess(guess) 
@@ -44,12 +45,12 @@ function validateGuess(guess){
 }
 
 function checkGuess(guess){
-if(guess === ramdomNumber){
+if(guess === randomNumberNumber){
     displayMessege('You guessed is right')
     endGame()
-} else if(guess < ramdomNumber){
+} else if(guess < randomNumber){
     displayMessege('Number is toooo low')
-}else if(guess > ramdomNumber){
+}else if(guess > randomNumber){
     displayMessege('Number is tooooo high')
 }
 
@@ -79,7 +80,7 @@ function endGame(){
 function newGame(){
     const newGameButton = document.querySelector('#newGame')
     newGameButton.addEventListener('click' , function(e){
-        ramdomNumber =  parseInt(Math.random() * 100 + 1);
+        randomNumber =  parseInt(Math.random() * 100 + 1);
         prevGuess = []
         numGuess = 1
         guessSlot.innerHTML = ''
