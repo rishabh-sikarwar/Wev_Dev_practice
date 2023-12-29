@@ -14,7 +14,7 @@ const p = document.createElement('p')
 let prevGuess = []
 let numGuess = 1
 
-let playGame = true
+let playGame = true  
 if(playGame){
     submit.addEventListener('click' , function(e){
         e.preventDefault()
@@ -91,6 +91,8 @@ function newGame(){
     })
 
 }
+
+
 
 
 
