@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Async project</title>
+</head>
+<body>
+    <h1>Rishabh learning with chai or code</h1>
+    <button id="stop">stop</button>
+</body>
+<script>
+    const sayRishabh = function(){
+        console.log('Rishabh');
+    }
+const changeText = function(){
+    document.querySelector('h1').innerHTML = 'best JS learning is being learned by me'
+}
+const changeMe = setTimeout( sayRishabh, 2000)                //time = 2000 in mili seconds which is 2 seconds
+    setTimeout( changeText, 2000)   
+
+    document.querySelector('#stop').addEventListener('click' , function(){
+        clearTimeout(changeMe)
+        console.log('stopped');
+    })
+</script>
+</html>
