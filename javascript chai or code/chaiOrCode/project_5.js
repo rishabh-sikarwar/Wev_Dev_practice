@@ -10,7 +10,10 @@ const randomColor = function(){
 }
 
 const startChangingColor = function(){
-document.body.style.backgroundColor = randomColor();
+setInterval(changeBgColor)
+changeBgColor = function(){
+    document.body.style.backgroundColor = randomColor();
+}
 };
 const stopChangingColor = function(){};
 console.log(randomColor());
