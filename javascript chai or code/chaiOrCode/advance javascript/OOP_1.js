@@ -46,8 +46,33 @@ console.log(UserFour);
 
 
 
+//***************************inheritance **************************
+const userTeacher = {
+    name: "Chai",
+    email : "chai@google.com"
+}
 
-//****************************prototype  ************************
+const Teacher =  {
+    makeVideos : true
+}
+
+const TeachingSupport = {
+    isAvailable : false
+}
+
+const TASupport = {
+    makeAssignment : 'JS assignment',
+    fullTime : true,
+    __proto__: TeachingSupport                   //to link the objects
+}
+
+Teacher.__proto__ = userTeacher                  //andar or bahar dono jagah se ye proto wala use kar sakte hai 
+
+
+
+//********************************* modern syntax for inheritance 
+
+Object.setPrototypeOf(TeachingSupport , Teacher)     // teachingsupport  ko teacher ki access mil jaati hai
 
 
 
