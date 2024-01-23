@@ -75,10 +75,3 @@ Teacher.__proto__ = userTeacher                  //andar or bahar dono jagah se 
 Object.setPrototypeOf(TeachingSupport , Teacher)     // teachingsupport  ko teacher ki access mil jaati hai
 
 
-
-
-
-
-
-
-
