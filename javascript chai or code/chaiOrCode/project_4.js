@@ -21,6 +21,7 @@ if(playGame){
       const guess =  parseInt( userInput.value)
       console.log(guess);
       validateGuess(guess)
+
     })
 }
 
@@ -33,9 +34,9 @@ function validateGuess(guess){
         alert('Please enter a number less than 100')
     }else{
         prevGuess.push(guess)
-        if(numGuess ===11){
+        if(numGuess === 11){
             displayGuess(guess)
-            displayMessege(`Game Over . Random number was ${ramdomNumber}`)
+            displayMessege(`Game Over . Random number was ${randomNumber}`)
             endGame()
         }else {
             displayGuess(guess) 
@@ -45,7 +46,7 @@ function validateGuess(guess){
 }
 
 function checkGuess(guess){
-if(guess === randomNumberNumber){
+if(guess === randomNumber){
     displayMessege('You guessed is right')
     endGame()
 } else if(guess < randomNumber){
@@ -58,7 +59,7 @@ if(guess === randomNumberNumber){
 
 function displayGuess(guess){
     userInput.value = ''
-    guessSlot.innerHTML +=    `${guess}   `
+    guessSlot.innerHTML +=    ` ${guess}   `
     numGuess++;
     remaining.innerHTML = `${11 - numGuess}`
 }
@@ -79,6 +80,7 @@ function endGame(){
 
 function newGame(){
     const newGameButton = document.querySelector('#newGame')
+    newGameButton.addEventListener('mouseover' , function(e) {document.body.style.cursor = 'pointer';})
     newGameButton.addEventListener('click' , function(e){
         randomNumber =  parseInt(Math.random() * 100 + 1);
         prevGuess = []
