@@ -22,4 +22,17 @@ nav li {
     display: inline;
     margin-right: 20px;
 }
+body {
+    background-color: #ffffff;
+    color: #000000;
+}
+body {
+    background-color: #ffffff;
+    color: #000000;
+}
 
+/* Dark mode styles */
+body.dark-mode {
+    background-color: #1a1a1a;
+    color: #ffffff;
+}
