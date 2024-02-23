@@ -1,16 +1,27 @@
-/* Add your custom CSS styles here */
-body {
+
+   body {
     font-family: Arial, sans-serif;
+    background-color: #f0f0f0; /* Light grey background */
 }
 
 form {
     max-width: 400px;
     margin: 0 auto;
+    background-color: #fff; /* White background for the form */
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Box shadow for a subtle elevation effect */
+}
+
+h2 {
+    text-align: center;
+    color: #333; /* Dark grey color for the heading */
 }
 
 label {
     display: block;
-    margin-bottom: 5px;
+    margin-bottom: 8px;
+    color: #666; /* Dark grey color for the labels */
 }
 
 input[type="text"],
@@ -18,8 +29,8 @@ input[type="number"],
 select,
 textarea {
     width: 100%;
-    padding: 8px;
-    margin-bottom: 10px;
+    padding: 10px;
+    margin-bottom: 15px;
     border: 1px solid #ccc;
     border-radius: 4px;
 }
@@ -27,10 +38,11 @@ textarea {
 input[type="submit"] {
     background-color: #4CAF50;
     color: white;
-    padding: 10px 20px;
+    padding: 12px 24px;
     border: none;
     border-radius: 4px;
     cursor: pointer;
+    transition: background-color 0.3s ease; /* Smooth transition for hover effect */
 }
 
 input[type="submit"]:hover {
@@ -38,5 +50,57 @@ input[type="submit"]:hover {
 }
 
 textarea {
-    height: 100px;
+    height: 120px; /* Increase the height of the textarea */
+}
+
+
+
+/* Add animation for form entry */
+form {
+    max-width: 400px;
+    margin: 0 auto;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    animation: fadeIn 0.5s ease; /* Fade-in animation */
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Add animation for submit button hover effect */
+input[type="submit"] {
+    background-color: #4CAF50;
+    color: white;
+    padding: 12px 24px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease; /* Smooth transition for hover effect */
+}
+
+input[type="submit"]:hover {
+    background-color: #45a049;
+    animation: pulse 0.3s ease; /* Pulse animation */
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.05);
+    }
+    100% {
+        transform: scale(1);
+    }
 }
