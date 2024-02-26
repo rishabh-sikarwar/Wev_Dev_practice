@@ -178,4 +178,37 @@ nav li {
     text-align: center;
 }
 
+.box-link {
+    overflow: hidden;
+    white-space: nowrap;
+    position: relative;
 
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #7f6adff8;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    margin-right: 20px;
+    animation: marquee 1s linear infinite;
+}
+
+/* @keyframes marquee {
+    0% {
+        transform: translateX(50%);
+    }
+    100% {
+        transform: translateX(-50%);
+    }
+} */
+
+
+
+@keyframes marquee {
+    from {
+        right: 100%;
+    }
+    to {
+        left: 20%;
+    }
+}
