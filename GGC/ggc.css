@@ -212,3 +212,24 @@ nav li {
         left: 20%;
     }
 }
+
+
+  
+
+
+  @keyframes blink {
+    0% {
+      opacity: 1; /* Visible */
+    }
+    50% {
+      opacity: 0; /* Hidden */
+    }
+    100% {
+      opacity: 1; /* Visible */
+    }
+  }
+  
+  .blinking {
+    animation: blink 1s infinite; /* Apply the animation infinitely */
+  }
+  
