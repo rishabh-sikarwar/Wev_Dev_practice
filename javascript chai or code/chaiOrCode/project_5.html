@@ -3,13 +3,40 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Infinite Color changing game</title>
+    <title>text changing</title>
 </head>
 <body>
-   <h1>start should change the Background color every second</h1> 
+   <h1>start should change the Text   and check it in the console </h1> 
 <button id="start">start</button>
 <button id="stop">stop</button>
-<script src="project_5.js"></script>
+
+<p id="text"></p>
+<script>
+
+    const text = document.getElementById('text')
+    const start = document.getElementById('start')
+    const stop = document.getElementById('stop')
+    let currentDate = Date.now();
+    console.log(typeof(currentDate));
+    const sayDate = function(str){
+        console.log(str,Date.toLocaleTimeString());
+        text.innerHTML= `${currentDate}`;
+        
+    }
+   
+    let timestart
+
+    start.addEventListener('click' , ()=>{
+         timestart  = setInterval(sayDate , 1000 , "HELLLOOOOOOOOOOOOOOOOOO"); 
+    })
+
+    stop.addEventListener('click' , ()=>{
+        clearInterval(timestart)
+    })
+
+
+
+</script>
 
 </body>
 </html> 
