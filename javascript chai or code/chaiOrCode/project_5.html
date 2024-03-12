@@ -3,35 +3,36 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>text changing</title>
+    <title>color  changing</title>
 </head>
-<body>
-   <h1>start should change the Text   and check it in the console </h1> 
+<body id="body">
+   <h1>start should change the color   and stop stops it</h1> 
 <button id="start">start</button>
 <button id="stop">stop</button>
 
-<p id="text"></p>
 <script>
 
-    const text = document.getElementById('text')
     const start = document.getElementById('start')
     const stop = document.getElementById('stop')
-    let currentDate = Date.now();
-    console.log(typeof(currentDate));
-    const sayDate = function(str){
-        console.log(str,Date.toLocaleTimeString());
-        text.innerHTML= `${currentDate}`;
-        
+    const body = document.getElementById('body')
+    function randomNumber(){
+        let randomNumber = parseInt(Math.random() * 1000  )
+        return randomNumber
     }
-   
-    let timestart
+    let startColorChange
 
+   
     start.addEventListener('click' , ()=>{
-         timestart  = setInterval(sayDate , 1000 , "HELLLOOOOOOOOOOOOOOOOOO"); 
+       startColorChange = setInterval(()=>{
+        console.log(randomNumber());
+        body.style.backgroundColor =   `#${randomNumber()}`
+       }, 1000) 
+        
+
     })
 
     stop.addEventListener('click' , ()=>{
-        clearInterval(timestart)
+        clearInterval(startColorChange)
     })
 
 
