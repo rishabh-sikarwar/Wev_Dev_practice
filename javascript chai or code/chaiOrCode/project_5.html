@@ -12,28 +12,59 @@
 
 <script>
 
-    const start = document.getElementById('start')
-    const stop = document.getElementById('stop')
-    const body = document.getElementById('body')
-    function randomNumber(){
-        let randomNumber = parseInt(Math.random() * 1000  )
-        return randomNumber
-    }
-    let startColorChange
+    // const start = document.getElementById('start')
+    // const stop = document.getElementById('stop')
+    // const body = document.getElementById('body')
+    // function randomNumber(){
+    //     let randomNumber = parseInt(Math.random() * 1000  )
+    //     return randomNumber
+    // }
+    // let startColorChange
 
    
-    start.addEventListener('click' , ()=>{
-       startColorChange = setInterval(()=>{
-        console.log(randomNumber());
-        body.style.backgroundColor =   `#${randomNumber()}`
-       }, 1000) 
+    // start.addEventListener('click' , ()=>{
+    //    startColorChange = setInterval(()=>{
+    //     console.log(randomNumber());
+    //     body.style.backgroundColor =   `#${randomNumber()}`
+    //    }, 1000) 
         
 
-    })
+    // })
 
-    stop.addEventListener('click' , ()=>{
-        clearInterval(startColorChange)
-    })
+    // stop.addEventListener('click' , ()=>{
+    //     clearInterval(startColorChange)
+    // })
+
+//   but there is a problem if I click on the start button more than one time then the stop button will not work..........so now what to do....
+//**************************************************************************************************************************************************
+const randomColor = function () {
+  const hex = '0123456789ABCDEF';
+  let color = '#';
+  for (let i = 0; i < 6; i++) {
+    color += hex[Math.floor(Math.random() * 16)];
+  }
+  return color;
+};
+
+let intervalId;
+const startChangingColor = function () {
+  if (!intervalId) {
+    intervalId = setInterval(changeBgColor, 1000);
+  }
+
+  function changeBgColor() {
+    document.body.style.backgroundColor = randomColor();
+  }
+};
+const stopChangingColor = function () {
+  clearInterval(intervalId);
+  intervalId = null;
+};
+
+document.querySelector('#start').addEventListener('click', startChangingColor);
+
+document.querySelector('#stop').addEventListener('click', stopChangingColor);
+
 
 
 
