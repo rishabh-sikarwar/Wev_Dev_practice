@@ -1,0 +1,19 @@
+{
+  "name": "backendlearn",
+  "version": "1.0.0",
+  "description": "just starting to learn backend",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "keywords": [
+    "node",
+    "backend",
+    "chai"
+  ],
+  "author": "Rishabh Sikarwar",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.19.2"
+  }
+}
